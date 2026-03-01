@@ -37,7 +37,7 @@ listRef.addEventListener("click", (event) => {
   renderArray();
 });
 
-//---------------------------------
+//-------------------------------
 
 const btnEl = document.querySelector("#saveBtn");
 const form = document.querySelector(".form");

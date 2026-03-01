@@ -17,42 +17,30 @@ body {
 
 h1 {
   text-align: center;
-
   color: #444;
 }
 
 input,
 button {
   display: block;
-
   width: calc(100% - 40px);
-
   margin: 10px auto;
-
   padding: 10px;
-
   border: 1px solid #ddd;
-
   border-radius: 5px;
-
   font-size: 16px;
 }
 
 a {
   color: chocolate;
-
   font-size: 22px;
 }
 
 button {
   background-color: #00ff15;
-
   color: white;
-
   cursor: pointer;
-
   border: none;
-
   width: 100px;
 }
 
@@ -62,23 +50,16 @@ button:hover {
 
 ul {
   list-style-type: none;
-
   padding: 0;
 }
 
 ul li {
   padding: 10px;
-
   margin: 5px 0;
-
   background: #f9f9f9;
-
   border-radius: 4px;
-
   display: flex;
-
   justify-content: space-between;
-
   align-items: center;
 }
 
@@ -88,7 +69,6 @@ ul li:hover {
 
 button.delete {
   background-color: #dc3545;
-
   color: white;
 }
 
