@@ -2,7 +2,8 @@ const inputRef = document.querySelector("#bookmarkInput");
 const listRef = document.querySelector("#bookmarkList");
 const btnRef = document.querySelector("#addBookmarkBtn");
 
-const bookArray = [];
+const bookArray = JSON.parse(localStorage.getItem("bookmarks"));
+renderArray();
 
 btnRef.addEventListener("click", () => {
   const urlValue = inputRef.value.trim();
@@ -22,6 +23,7 @@ function renderArray() {
     </li>`;
     })
     .join("");
+  localStorage.setItem("bookmarks", JSON.stringify(bookArray));
   listRef.innerHTML = item;
 }
 
@@ -43,7 +45,7 @@ const formFields = form.elements;
 
 btnEl.addEventListener("click", (event) => {
   localStorage.clear();
-  event.preventDefault()
+  event.preventDefault();
 });
 
 for (let i = 0; i < formFields.length; i += 1) {
@@ -51,7 +53,7 @@ for (let i = 0; i < formFields.length; i += 1) {
 }
 
 function changeHandler() {
-    localStorage.setItem(this.name, this.value);
+  localStorage.setItem(this.name, this.value);
 }
 
 function checkStorage() {
