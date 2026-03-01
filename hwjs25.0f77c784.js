@@ -717,7 +717,8 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 const inputRef = document.querySelector("#bookmarkInput");
 const listRef = document.querySelector("#bookmarkList");
 const btnRef = document.querySelector("#addBookmarkBtn");
-const bookArray = [];
+const bookArray = JSON.parse(localStorage.getItem("bookmarks"));
+renderArray();
 btnRef.addEventListener("click", ()=>{
     const urlValue = inputRef.value.trim();
     if (urlValue) {
@@ -733,6 +734,7 @@ function renderArray() {
         <button id="addBookmarkBtn" data-action="${index}">X</button>
     </li>`;
     }).join("");
+    localStorage.setItem("bookmarks", JSON.stringify(bookArray));
     listRef.innerHTML = item;
 }
 listRef.addEventListener("click", (event)=>{
